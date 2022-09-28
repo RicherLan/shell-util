@@ -1,7 +1,7 @@
 #!/bin/bash
 
 :<<!
-当前目录下的所有webp静图，转化为png格式，并resize宽高为 width x height
+当前目录下的所有png，转化为webp格式，并resize宽高为 width x height
 !
 
 if [[ $1 ]]; then
@@ -10,12 +10,12 @@ if [[ $1 ]]; then
     animwebpdirpath=$path/animwebp #要创建的文件夹路径
     `mkdir $animwebpdirpath`
     
-    results=`ls $path | grep '.png$'` #获得所有.webp结尾的文件名
+    results=`ls $path | grep '.png$'` #获得所有.png结尾的文件名
     i=0
     inputimgpaths=""
     for result in $results
     do 
-        file=$path/$result #获得每个webp文件的路径
+        file=$path/$result #获得每个png文件的路径
         if test -f $file #判断是否是文件
         then 
             i=$(($i+1))
