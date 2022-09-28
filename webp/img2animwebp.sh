@@ -1,7 +1,7 @@
 #!/bin/bash
 
 :<<!
-当前目录下的所有png，转化为webp格式，并resize宽高为 width x height
+当前目录下的所有png，转化为webp格式
 !
 
 if [[ $1 ]]; then
